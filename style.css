@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Variables for colors, fonts , background */
+:root {
+    --primary: #0f1e85;
+    --secondary: #5cb641;
+    --whiteback: #f2f6fa;
+    --Font-Lato: 'Lato', sans-serif;
+    --dflex: flex;
+    --block: block;
+    --col-direction: column;
+    --color-lightgray:#ecf1f5;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    color: #777;
+    font-family: sans-serif;
+}
+
+/* Common classes */
+.wrapper {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.d_flex {
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+
+.grid-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.heading-large {
+    font-size: 54px;
+    font-weight: 700;
+    font-family: var(--Font-Lato);
+    margin-top: 0;
+}
+
+.common-heading {
+    font-size: 20px;
+    font-family: var(--Font-Lato);
+    font-weight: 800;
+    line-height: 29px;
+    letter-spacing: 0.28px;
+    margin-top: 8px;
+}
+.flex-col{
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+h4{
+    font-size: 38px;
+    margin:0;
+}
+h5{
+    font-size: 20px;
+    margin:0;
+}
+
+.content{
+    font-size: 20px!important;
+    font-weight:400;
+    line-height: 1.6;
+}
+
+/*============= Header CSS ========= */
+.header-main {
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: -1px 10px 37px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 10px 37px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 10px 37px -22px rgba(0, 0, 0, 0.75);
+    font-family: var(--Font-Lato);
+    /* position: fixed;
+    top:0;
+    left:0; */
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 12px;
+}
+
+.icon_container {
+    width: 20%;
+}
+
+.icon_container>img {
+    max-width: 100%;
+}
+
+header .header-container .nav_bar>ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+header .header-container .nav_bar>ul .nav_items {
+    font-size: 1.0rem;
+    font-weight: 700;
+}
+
+header .header-container .nav_bar>ul .nav_items a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+header .header-container .nav_bar>ul .color-primary {
+    background-color: var(--primary);
+
+}
+
+header .header-container .nav_bar>ul .color-secondary {
+    background-color: var(--secondary);
+}
+
+.header-main .header-container .nav_bar li.nav_items.items_button {
+    padding: 9px 15px;
+    border-radius: 30px;
+}
+
+.nav_bar ul .active-item {
+    color: var(--secondary);
+}
+
+.header-main .header-container .nav_bar li.nav_items a div.cart_Icon {
+    margin: 5px 5px;
+}
+
+.header-main .header-container .nav_bar li.nav_items a div.cart_Icon>.lower-Box {
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    border: 2px solid var(--secondary);
+    padding: 6px 0px;
+    text-align: center;
+    color: #5cb641;
+}
+
+.header-main .header-container .nav_bar li.nav_items a div.cart_Icon span.upper-radius {
+    border-top: 2.5px solid var(--secondary);
+    width: auto;
+    width: 13px;
+    height: 8px;
+    border-top-right-radius: 99px;
+    border-left: 1px solid var(--secondary);
+    border-top-left-radius: 99px;
+    border-right: 1px solid var(--secondary);
+    margin: 1px auto;
+    position: absolute;
+    bottom: 98%;
+    left: 22%;
+}
+
+.header-main .header-container .nav_bar li.nav_items a div {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Hide class in the large Media */
+.header-container .small_device {
+    display: none;
+}
+
+
+
+/*================ Main ELement===============  */
+
+main .main-banner {
+    background-image: url(../Images/banner_image.webp);
+    background-position: 100%;
+    object-fit: cover;
+    height: 100%;
+    padding: 3rem;
+
+}
+
+.text_content {
+    flex: 50%;
+}
+
+main .banner_content .text_content .content {
+    color: #fff;
+    padding: 15px;
+}
+
+main .banner_content .text_content .content>h4 {
+    margin-bottom: 20px;
+}
+
+main .banner_content .text_content .buttons-container form input {
+    padding: 10px;
+    color: rgb(154 148 148);
+    border: none;
+    border-radius: 18px;
+    width: 460px;
+    font-family: var(--Font-Lato);
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 16px;
+    margin-left: 11px;
+}
+
+
+main .banner_content .buttons-container .submit {
+    padding: 10px 30px 10px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 12px;
+    background-color: var(--secondary);
+    color: #fff;
+    font-weight: 700;
+    margin-left: 39px;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+main .banner_content .text_content .buttons-container form input:focus-visible {
+    border: 1px solid white;
+}
+
+
+main .banner_content .button-container form {
+    display: var(--dflex);
+    align-items: baseline;
+}
+main .banner_content{
+        margin-bottom: 50px;
+    
+    }
+
+.banner_content .video_content {
+    flex: 50%;
+    height: 532px;
+    padding: 15px;
+}
+
+/*================Section CSS===================*/
+
+section.section-content {
+    background-color: var(--whiteback);
+    width: 100%;
+    font-family: var(--Font-Lato);
+}
+
+section.section-content .over_lapcard {
+    background-color: #fff;
+    border-radius: 25px;
+    width: 950px;
+    text-align: center;
+    transform: translateY(-60px);
+}
+section.section-content .over_lapcard .para-container{
+    padding: 70px 20px 40px 20px;
+    border-radius: 25px;
+
+}
+
+section.section-content .over_lapcard .para-container h4,h5 {
+    margin-top:5px;
+    color:black;
+}
+    /* cards CSS */
+
+.info-card-container>div{
+ border-right:1px solid var(--color-lightgray);
+ width:33%;
+ margin-bottom:37px;
+}
+.info-card-container .card:last-child{
+    border-right: none;
+}
+
+ .card .card-col .card_icon-box{
+    width: 30%;
+    margin: 0 auto;
+}
+.card .card-col .card_icon-box>svg{
+    fill: var(--secondary);
+}
+.card .card-col .card_icon-box>img{
+    width:100%;
+}
+.info-card-container{
+    padding:30px;
+}
+.card .card-col .card_title{
+font-size: 21px;
+font-weight: 500;
+margin:8px;
+color: black;
+}
+
+.card .card-col .card_content{
+    font-size:18px;
+    margin:20px;
+}
